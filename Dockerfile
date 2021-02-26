@@ -21,13 +21,14 @@ LABEL maintainer="Matthew Emes <memes@matthewemes.com>" \
       org.opencontainers.image.revision="${COMMIT_SHA}" \
       org.opencontainers.image.licenses="MIT" \
       org.label-schema.schema-version="1.0" \
-      org.label-schema.schema.name="APP" \
+      org.label-schema.name="APP" \
       org.label-schema.description="Foo bar" \
       org.label-schema.url="https://github.com/memes/APP" \
       org.label-schema.vcs-url="https://github.com/memes/APP/tree/${COMMIT_SHA}" \
       org.label-schema.usage="https://github.com/memes/APP/tree/${COMMIT_SHA}/README.md" \
       org.label-schema.version="${TAG_NAME}" \
-      org.label-schema.vcs_ref="${COMMIT_SHA}"
+      org.label-schema.vcs_ref="${COMMIT_SHA}" \
+      org.label-schema.license="MIT"
 
 # TODO: @memes - review if updated package required
 RUN apk --no-cache add ca-certificates=20191127-r4
