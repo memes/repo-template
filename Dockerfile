@@ -27,7 +27,7 @@ LABEL maintainer="Matthew Emes <memes@matthewemes.com>" \
       org.label-schema.vcs-url="https://github.com/memes/APP/tree/${COMMIT_SHA}" \
       org.label-schema.usage="https://github.com/memes/APP/tree/${COMMIT_SHA}/README.md" \
       org.label-schema.version="${TAG_NAME}" \
-      org.label-schema.vcs_ref="${COMMIT_SHA}" \
+      org.label-schema.vcs-ref="${COMMIT_SHA}" \
       org.label-schema.license="MIT"
 
 # TODO: @memes - review if updated package required
