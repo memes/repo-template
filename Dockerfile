@@ -1,13 +1,13 @@
 # TODO: @memes - configure as needed
-FROM golang:1.15.0 AS builder
+FROM golang:1.16.5 AS builder
 WORKDIR /src
 COPY . .
 RUN CGO_ENABLED=0 GOOS=linux GO111MODULE=on go build -o APP
 
 # TODO: @memes - set base alpine
-FROM alpine:3.12.1
-# Default to 'master' so that a build outside of CI process has valid links
-ARG COMMIT_SHA="master"
+FROM alpine:3.13.5
+# Default to 'main' so that a build outside of CI process has valid links
+ARG COMMIT_SHA="main"
 ARG TAG_NAME="unreleased"
 # TODO: @memes - set labels correctly
 LABEL maintainer="Matthew Emes <memes@matthewemes.com>" \
@@ -31,7 +31,7 @@ LABEL maintainer="Matthew Emes <memes@matthewemes.com>" \
       org.label-schema.license="MIT"
 
 # TODO: @memes - review if updated package required
-RUN apk --no-cache add ca-certificates=20191127-r4
+RUN apk --no-cache add ca-certificates=20191127-r5
 WORKDIR /run
 COPY --from=builder /src/APP /usr/local/bin/
 ENTRYPOINT ["/usr/local/bin/APP"]
