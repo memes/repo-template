@@ -12,3 +12,6 @@ terraform.tfvars
 terraform.tfvars.json
 *.auto.tfvars
 *.auto.tfvars.json
+
+# Ignore generated binaries in dist
+dist/
