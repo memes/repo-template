@@ -8,4 +8,4 @@ layout pyenv 3.9.1
 # layout ruby
 
 # Terraform via tfenv; set to latest:^0.14, 0.13.6, etc.
-export TFVAR_TERRAFORM_VERSION=latest
+export TFVAR_TERRAFORM_VERSION=latest:^1.0

@@ -2,7 +2,7 @@
 ---
 fileignoreconfig:
 - filename: .github/workflows/release.yml
-  checksum: be3e0d4c7edcb374e48a402fb87c08b86fe49e4f89bbdf1e04bd8d14492abec6
+  checksum: b19804628e0493f0222663af7ee402d8db5636f5b32c84a2c1d2385e67021307
 # Remove after rename
 - filename: dotenvrc
-  checksum: 87d87144f4f6412e13b3706d4ed4b236c5bb337abc79d1bd984555a2d2fa9624
+  checksum: f62c5734ef2ca9cdb739291d6a3b121f8c3b7a58340edb5f31fb595fa2970f90
