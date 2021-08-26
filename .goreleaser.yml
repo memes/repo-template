@@ -1,5 +1,5 @@
 # use goreleaser for builds and containers
-# spell-checker: ignore goreleaser incpatch goarch yamllint opencontainers
+# spell-checker: ignore incpatch goarch opencontainers
 #
 # TODO: @memes
 #  - search for APP and update as needed
