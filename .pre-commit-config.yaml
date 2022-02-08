@@ -14,7 +14,7 @@ repos:
     hooks:
       - id: terraform_fmt
       - id: terraform_docs
-        args: ['--args=--sort-by=required']
+        args: ['--args=--sort-by=required --hide=providers']
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.8.0.4
     hooks:
@@ -24,21 +24,10 @@ repos:
     hooks:
       - id: check-executables-have-shebangs
       - id: check-merge-conflict
-      - id: check-yaml
       - id: detect-private-key
       - id: end-of-file-fixer
-      - id: sort-simple-yaml
       - id: trailing-whitespace
-  # Talisman can't be built from source in current pre-commit; invoke a locally
-  # installed binary instead.
-  - repo: local
+  - repo: https://github.com/thoughtworks/talisman
+    rev: v1.23.0
     hooks:
-      - id: local-talisman
-        name: talisman
-        entry: talisman --githook pre-commit
-        stages:
-          - commit
-        pass_filenames: false
-        types:
-          - text
-        language: system
+      - id: talisman-commit
