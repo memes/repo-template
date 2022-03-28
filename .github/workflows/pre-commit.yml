@@ -27,6 +27,8 @@ jobs:
           sudo chmod 0755 /usr/local/bin/terraform-docs
       - uses: actions/setup-python@v3
       - uses: pre-commit/action@v2.0.3
+  # TODO @memes - this is enabled in repo-template but should be disabled as
+  # necessary
   hadolint:
     runs-on: ubuntu-latest
     steps:
@@ -34,7 +36,10 @@ jobs:
       - uses: hadolint/hadolint-action@v1.6.0
         with:
           dockerfile: Dockerfile
+  # TODO @memes - this is disabled in repo-template but should be enabled in Go
+  # projects
   golangci-lint:
+    if: false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
