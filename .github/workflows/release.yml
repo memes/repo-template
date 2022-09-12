@@ -7,26 +7,26 @@ name: release
 on:
   push:
     tags:
-      - 'v*'
+      - '*'
+
+permissions:
+  contents: write
+  packages: write
+  id-token: write
 
 jobs:
   goreleaser:
     runs-on: ubuntu-latest
     steps:
-      - id: checkout
-        name: Checkout
+      - name: Checkout source
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - id: setup-go
-        name: Set up Go
+      - name: Setup Go
         uses: actions/setup-go@v3
         with:
-          go-version: 1.18
-      - name: Execute linter
-        uses: golangci/golangci-lint-action@v3.2.0
-        with:
-          version: latest
+          go-version-file: go.mod
+          cache: true
       - name: Install cosign
         if: ${{ success() }}
         uses: sigstore/cosign-installer@v2.6.0
@@ -41,8 +41,15 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           logout: true
-      - id: goreleaser
-        name: Run GoReleaser
+      - id: ghcr-login
+        name: Login to GitHub Container Registry
+        if: ${{ success() }}
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run GoReleaser
         if: ${{ success() }}
         uses: goreleaser/goreleaser-action@v3
         with:
