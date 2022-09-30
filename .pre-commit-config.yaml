@@ -15,6 +15,10 @@ repos:
       - id: terraform_fmt
       - id: terraform_docs
         args: ['--args=--sort-by=required --hide=providers']
+  - repo: https://github.com/mattlqx/pre-commit-ruby
+    rev: v1.3.5
+    hooks:
+      - id: rubocop
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: v0.8.0.4
     hooks:
