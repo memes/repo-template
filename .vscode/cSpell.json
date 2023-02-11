@@ -3,9 +3,12 @@
     "version": "0.2",
     "language": "en",
     "words": [
+        "direnv",
         "DOCKERHUB",
+        "envrc",
         "fileignoreconfig",
         "goarch",
+        "gofumpt",
         "golangci",
         "gomod",
         "goreleaser",
@@ -19,6 +22,7 @@
         "thumbsup",
         "trimpath",
         "venv",
+        "wontfix",
         "workdir",
         "yamllint"
     ],
