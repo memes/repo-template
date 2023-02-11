@@ -1,0 +1,22 @@
+# spell-checker: disable
+---
+name: release-please
+
+# yamllint disable-line rule:truthy
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Release Please
+        uses: GoogleCloudPlatform/release-please-action@v3.1.2
+        with:
+          # TODO @memes - link to a repo PAT, make sure release-type and
+          # package-name match the repo type.
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+          release-type: go
+          package-name: repo-template
