@@ -1,7 +1,7 @@
 # TODO @memes remove is not a golang project
 # spell-checker: disable
 ---
-name: release
+name: go-release
 
 # yamllint disable-line rule:truthy
 on:
