@@ -24,4 +24,7 @@ demos and projects.
    `dot.envrc` and `dot.tool-versions` provide starting points.
 5. Modify README.md and CONTRIBUTING.md, change LICENSE as needed.
 6. Review GitHub PR and issue templates.
-7. Commit changes.
+7. If using `release-please` action, make sure that _Settings_ > _Action_ >
+   _General_  > _Allow GitHub Actions to create and approve pull requests_ is
+   checked.
+8. Commit changes.
