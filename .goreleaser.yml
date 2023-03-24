@@ -59,14 +59,12 @@ signs:
       - --output-signature
       - '${signature}'
       - '${artifact}'
+      - '--yes'
     output: true
 snapshot:
   name_template: "{{ incpatch .Tag }}-next"
 changelog:
-  sort: asc
-  filters:
-    exclude:
-      - '^[Cc]hore:'
+  skip: true
 dockers:
   - goos: linux
     goarch: amd64
@@ -103,6 +101,7 @@ docker_signs:
     args:
       - sign
       - '${artifact}'
+      - '--yes'
 release:
   draft: false
   prerelease: auto
