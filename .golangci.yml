@@ -62,6 +62,22 @@ linters:
     - whitespace
     - wrapcheck
 linters-settings:
+  # TODO @memes - update the list of allowed imports
+  depguard:
+    rules:
+      main:
+        files:
+          - $all
+          - "!$test"
+        allow:
+          - $gostd
+          - github.com/memes
+      test:
+        files:
+          - $test
+        allow:
+          - $gostd
+          - github.com/memes
   errcheck:
     check-type-assertions: true
     check-blank: true
