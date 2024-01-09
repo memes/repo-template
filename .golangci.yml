@@ -3,7 +3,8 @@
 ---
 run:
   concurrency: 6
-  deadline: 5m
+  timeout: 5m
+issues:
   max-issues-per-linter: 0
   max-same-issues: 0
 linters:
@@ -153,7 +154,6 @@ linters-settings:
       - unnecessaryBlock
   nolintlint:
     allow-unused: false
-    allow-leading-space: false
     allow-no-explanation: []
     require-explanation: true
     require-specific: true
