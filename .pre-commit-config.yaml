@@ -7,14 +7,23 @@ repos:
     hooks:
       - id: yamllint
         files: \.(yml|yaml|talismanrc)$
-        types: [file, yaml]
+        types:
+          - file
+          - yaml
         entry: yamllint --strict
   - repo: https://github.com/antonbabenko/pre-commit-terraform
     rev: v1.86.0
     hooks:
       - id: terraform_fmt
       - id: terraform_docs
-        args: ['--args=--sort-by=required --hide=providers']
+        args:
+          - '--args=--sort-by=required --hide=providers'
+  - repo: https://github.com/compilerla/conventional-pre-commit
+    rev: v3.0.0
+    hooks:
+      - id: conventional-pre-commit
+        stages:
+          - commit-msg
   - repo: https://github.com/mattlqx/pre-commit-ruby
     rev: v1.3.5
     hooks:
@@ -30,6 +39,11 @@ repos:
       - id: check-merge-conflict
       - id: detect-private-key
       - id: end-of-file-fixer
+      # TODO: @memes - remove/modify if push to main is allowed
+      - id: no-commit-to-branch
+        args:
+          - -b
+          - main
       - id: trailing-whitespace
   - repo: https://github.com/thoughtworks/talisman
     rev: v1.31.0

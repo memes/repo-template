@@ -3,9 +3,6 @@
 .direnv
 .tool-versions
 
-# Ignore generated Gorelease binaries
-dist/
-
 # Ignore Ruby
 .bundle
 Gemfile.lock
