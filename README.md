@@ -18,8 +18,10 @@ demos and projects.
 2. Update `.pre-commit-config.yml` to add/remove plugins as necessary.
 3. Modify README.md and CONTRIBUTING.md, change LICENSE as needed.
 4. Review GitHub PR and issue templates.
-5. If using `release-please` action, make these changes to repo Settings:
-   1. _Settings_ > _Actions_ > _General_  >
-      _Allow GitHub Actions to create and approve pull requests_ is checked.
-   2. _Settings_ > _Secrets and Variables_ > _Actions_, and add `RELEASE_PLEASE_TOKEN` with PAT as a _Repository Secret_.
-6. Commit changes.
+5. If using `release-please` action, make these changes:
+   1. In GitHub Settings:
+      * _Settings_ > _Actions_ > _General_  > _Allow GitHub Actions to create and approve pull requests_ is checked
+      * _Settings_ > _Secrets and Variables_ > _Actions_, and add `RELEASE_PLEASE_TOKEN` with PAT as a _Repository Secret_
+   2. Reset [version.txt](version.txt) to an empty file or remove if using a different `release-please` type.
+6. Remove all [CHANGELOG](CHANGELOG.md) entries.
+7. Commit changes.
