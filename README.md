@@ -14,7 +14,6 @@ demos and projects.
 
 1. Use as a template when creating a new GitHub repo, or copy the contents into
    a bare-repo directory.
-
 2. Update `.pre-commit-config.yml` to add/remove plugins as necessary.
 3. Modify README.md and CONTRIBUTING.md, change LICENSE as needed.
 4. Review GitHub PR and issue templates.
@@ -22,6 +21,7 @@ demos and projects.
    1. In GitHub Settings:
       * _Settings_ > _Actions_ > _General_  > _Allow GitHub Actions to create and approve pull requests_ is checked
       * _Settings_ > _Secrets and Variables_ > _Actions_, and add `RELEASE_PLEASE_TOKEN` with PAT as a _Repository Secret_
-   2. Reset [version.txt](version.txt) to an empty file or remove if using a different `release-please` type.
+   2. Modify [release-please action](.github/workflows/release-please.yml) to have the correct release-type and enable
+   3. Reset [version.txt](version.txt) to an empty file or remove if using a different `release-please` type.
 6. Remove all [CHANGELOG](CHANGELOG.md) entries.
 7. Commit changes.
