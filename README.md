@@ -21,7 +21,8 @@ demos and projects.
    1. In GitHub Settings:
       * _Settings_ > _Actions_ > _General_  > _Allow GitHub Actions to create and approve pull requests_ is checked
       * _Settings_ > _Secrets and Variables_ > _Actions_, and add `RELEASE_PLEASE_TOKEN` with PAT as a _Repository Secret_
-   2. Modify [release-please action](.github/workflows/release-please.yml) to have the correct release-type and enable
-   3. Reset [version.txt](version.txt) to an empty file or remove if using a different `release-please` type.
+   2. Modify [release-please action](.github/workflows/release-please.yml) to enable it
+   3. Modify [release-please-config.json](release-please-config.json)] as needed
+   4. Reset [.release-please-manifest.json](.release-please-manifest.json) to an empty file or starting version for package(s).
 6. Remove all [CHANGELOG](CHANGELOG.md) entries.
 7. Commit changes.
