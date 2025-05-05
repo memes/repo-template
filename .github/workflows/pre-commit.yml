@@ -22,7 +22,7 @@ jobs:
       TALISMAN_VERSION: 1.37.0
       TERRAGRUNT_VERSION: 0.77.0
       TFDOCS_VERSION: 0.20.0
-      TFLINT_VERSION: 0.56.0
+      TFLINT_VERSION: 0.57.0
       TOFU_VERSION: 1.9.0
     steps:
       - uses: actions/checkout@v4
@@ -40,8 +40,8 @@ jobs:
           sudo chmod 0755 /usr/local/bin/terragrunt
       - name: Install tflint
         run: |
-          curl -fsSLO https://github.com/terraform-linters/tflint/releases/downloads/v${{ env.TFLINT_VERSION }}/tflint_linux_amd64.zip
-          unzip tflint_amd64.zip && rm tflint_amd64.zip
+          curl -fsSLO https://github.com/terraform-linters/tflint/releases/download/v${{ env.TFLINT_VERSION }}/tflint_linux_amd64.zip
+          unzip tflint_linux_amd64.zip && rm tflint_linux_amd64.zip
           sudo mv tflint /usr/local/bin/tflint
           sudo chmod 0755 /usr/local/bin/tflint
       - name: Install opentofu
