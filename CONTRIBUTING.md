@@ -14,6 +14,8 @@ applied.
 [pre-commit] is used to ensure that all files have consistent formatting and to
 avoid committing secrets.
 
+> NOTE: The included devcontainer is already setup for use with this repo.
+
 1. Install [pre-commit] in a virtual python environment or globally: see [instructions](https://pre-commit.com/#installation)
 2. Fork and clone this repo
 3. Install pre-commit hook to git
@@ -21,7 +23,7 @@ avoid committing secrets.
    E.g.
 
    ```shell
-   pip install -r requirements-dev.txt
+   pip install pre-commit
    pre-commit install --hook-type commit-msg --hook-type pre-commit
    ```
 
