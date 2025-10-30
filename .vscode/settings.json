@@ -15,5 +15,17 @@
             ],
             "url": "https://raw.githubusercontent.com/googleapis/release-please/refs/heads/main/schemas/manifest.json"
         }
-    ]
+    ],
+    "[python]":  {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnPaste": false,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        }
+    },
+    "python.languageServer": "Pylance",
+    "python.testing.pytestEnabled": true
 }
