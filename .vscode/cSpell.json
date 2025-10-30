@@ -31,6 +31,8 @@
     ],
     "ignorePaths": [
         ".devcontainer/devcontainer.json",
-        ".gitignore"
+        ".gitignore",
+        ".pre-commit-config.yaml",
+        "uv.lock"
     ]
 }
