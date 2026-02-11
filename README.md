@@ -1,11 +1,15 @@
 # repo-template
 
 ![GitHub release](https://img.shields.io/github/v/release/memes/repo-template?sort=semver)
-![Maintenance](https://img.shields.io/maintenance/yes/2024)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
+![GitHub last commit](https://img.shields.io/github/last-commit/memes/repo-template)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-3.0-4baaaa.svg)](CODE_OF_CONDUCT.md)
 
 This repository contains common settings and actions that I tend to use in my
 demos and projects.
+
+> NOTE: Unless explicitly stated, this repo is not officially endorsed or supported by F5 Inc (or any prior employer).
+> Feel free to open issues and I'll do my best to respond, but for product support you should go through F5's official
+> channels.
 
 ## Setup
 
