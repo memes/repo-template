@@ -36,7 +36,7 @@ jobs:
         with:
           cache: true
       - name: Install tofu
-        uses: opentofu/setup-opentofu@v1
+        uses: opentofu/setup-opentofu@v2
       - uses: actions/setup-python@v6
         with:
           python-version-file: ".python-version"
