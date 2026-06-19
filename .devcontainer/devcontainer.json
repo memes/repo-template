@@ -2,11 +2,11 @@
     "name": "memes-repo-template",
     "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
     "features": {
-        "ghcr.io/memes/devcontainers-features/direnv:1": {},
+        "ghcr.io/devcontainers-extra/features/direnv:1": {},
+        "ghcr.io/devcontainers-extra/features/opentofu:1": {},
+        "ghcr.io/devcontainers-extra/features/terraform-docs:1": {},
         "ghcr.io/memes/devcontainers-features/google-cloud-cli:1": {},
-        "ghcr.io/memes/devcontainers-features/opentofu:1": {},
         "ghcr.io/memes/devcontainers-features/talisman:1": {},
-        "ghcr.io/memes/devcontainers-features/terraform-docs:1": {},
         "ghcr.io/memes/devcontainers-features/tflint:1": {}
     },
     "customizations": {
