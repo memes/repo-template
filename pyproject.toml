@@ -12,7 +12,7 @@ dependencies = []
 dev = [
     "pre-commit>=4.7.0",
     "ruff>=0.17.2",
-    "ty>=0.0.80",
+    "ty>=0.0.91",
 ]
 
 [tool.ruff]
